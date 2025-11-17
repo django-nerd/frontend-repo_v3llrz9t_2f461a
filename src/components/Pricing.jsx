@@ -24,7 +24,7 @@ export default function Pricing() {
   ]
 
   return (
-    <section id="pricing" className="py-24">
+    <section id="pricing" className="py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white">Simple, transparent pricing</h2>
@@ -33,7 +33,10 @@ export default function Pricing() {
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {tiers.map((t) => (
-            <div key={t.name} className={`rounded-2xl border bg-white/5 p-6 backdrop-blur ${t.highlight ? 'border-0 ring-2' : 'border-white/10'}`} style={t.highlight ? { boxShadow: `0 0 0 1px ${primary}`, ringColor: primary } : {}}>
+            <div
+              key={t.name}
+              className={`rounded-2xl glass p-6 card-hover ${t.highlight ? 'ring-accent' : ''}`}
+            >
               <div className="flex items-baseline justify-between">
                 <h3 className="text-white font-semibold">{t.name}</h3>
                 <span className="text-sm text-slate-300/80">{t.tagline}</span>
@@ -46,7 +49,7 @@ export default function Pricing() {
                   </li>
                 ))}
               </ul>
-              <a href="#" className="mt-6 inline-flex w-full items-center justify-center rounded-lg px-4 py-2 font-medium text-slate-900" style={{ background: primary }}>
+              <a href="#" className="mt-6 inline-flex w-full items-center justify-center rounded-xl px-4 py-2 font-semibold text-slate-900 btn-glow" style={{ background: primary }}>
                 Choose {t.name}
               </a>
             </div>

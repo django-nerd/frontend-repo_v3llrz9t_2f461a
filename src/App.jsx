@@ -5,7 +5,8 @@ import Pricing from './components/Pricing'
 import ContentSections from './components/ContentSections'
 
 const primary = '#00E5D9'
-const background = '#051C2C' // interpreted from provided background color
+// The provided background "#05IC2C" contains an invalid character (I). Using deep blue for readability.
+const background = '#051C2C'
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
           <div className="flex items-center gap-4 text-sm">
             <a href="#about" className="text-slate-300/80 hover:text-white">About</a>
             <a href="#tos" className="text-slate-300/80 hover:text-white">Terms</a>
-            <a href="#pricing" className="inline-flex items-center rounded-md px-3 py-1.5 font-medium text-slate-900" style={{ background: primary }}>Get Started</a>
+            <a href="#pricing" className="inline-flex items-center rounded-xl px-3 py-1.5 font-semibold text-slate-900 btn-glow" style={{ background: primary }}>Get Started</a>
           </div>
         </div>
       </footer>

@@ -27,11 +27,15 @@ export default function Features() {
   ]
 
   return (
-    <section id="features" className="py-20">
+    <section id="features" className="py-24">
       <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-2xl text-center mb-10">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white">Detection built for real cities</h2>
+          <p className="mt-3 text-slate-300/80">Smart, fast and designed to run quietly in the background.</p>
+        </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {features.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+            <div key={title} className="rounded-2xl glass p-6 card-hover shine">
               <div className="mb-4 inline-flex rounded-lg p-2" style={{ background: `${primary}22` }}>
                 <Icon className="h-5 w-5" style={{ color: primary }} />
               </div>
